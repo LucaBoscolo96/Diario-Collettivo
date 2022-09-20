@@ -1,0 +1,15 @@
+
+<%- include("partials/header"); -%>
+
+<%  posts.map((post)=>{ %>
+    <h1><%=post.title%></h1> 
+    <% if (post.author) { %> <em>di <%=post.author%></em> <% } else { %> <em>di Anonimo </em> <% } %>
+    <p>
+    <%=post.content.substring(0, 100) + " ..."%>
+    <a class="nav-link" href="/posts/<%=post._id%>">Leggi di più</a>
+    </p>
+
+    <% }) %>
+
+
+<%- include("partials/footer"); -%>

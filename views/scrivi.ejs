@@ -1,0 +1,21 @@
+
+<%- include("partials/header"); -%>
+    <h1>A cosa stai pensando?</h1>
+    
+
+      <form class="" action="/scrivi" method="post">
+        <div class="form-group">
+          <label class="my-2">Titolo</label>
+          <input class="form-control" type="text" name="postTitle" required>
+          <label class="my-2">Contenuto</label>
+          <textarea class="form-control" name="postBody" rows="5" cols="30" required></textarea>
+          <label class="my-2">Il tuo nome </label><em class="text-muted"> (se vuoi, puoi lasciare vuoto questo campo)</em>
+          <input class="form-control" type="text" name="postAuthor">
+        </div>
+          <div class="container">
+            <button class="center btn btn-outline-dark brand-btn btn-lg my-3" type="submit" name="button">Pubblica</button>
+          </div>
+      </form>
+  
+
+<%- include("partials/footer"); -%>
